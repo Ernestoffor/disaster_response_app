@@ -133,12 +133,12 @@ def evaluate_model(model, X_test, Y_test, category_names):
     
     # Display the metrics showing precision, recall, f1-score, support and accuracy for each category name
     print("The model's metrics for each category are as follows:")
-    for ix, category in enumerate(category_names):
-        print(f"{category}: {'*'*45}")
-        print(classification_report(Y_test[:, ix], y_pred[:, ix]))
-        print('Accuracy in prediction is {0:.0%} \n\n'.format(accuracy_score(Y_test[:, ix], y_pred[:, ix])))
+    #for ix, category in enumerate(category_names):
+       # print(f"{category}: {'*'*45}")
+       # print(classification_report(Y_test[:, ix], y_pred[:, ix]))
+       # print('Accuracy in prediction is {0:.0%} \n\n'.format(accuracy_score(Y_test[:, ix], y_pred[:, ix])))
 
-
+    print(classification_report(Y_test, y_pred, target_names=category_names))
 
 def save_model(model, model_filepath):
     # Export and save the model to the model_filepath a pickle file

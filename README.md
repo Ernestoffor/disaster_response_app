@@ -39,6 +39,16 @@ In a Python script inside models directory, `train_classifier.py`, is a machine 
 
 The web app includes flask, html, css and javascript for the front end of the application. It is inside `app` directory containing templates with html, css and javascript as well as a run.py file that implements flask for visualizations. 
 
+### Requirements for Running and Using the App
+The following software packages are necessary to successfully run the app:
+- python 3.6 or later
+- plotly
+- pandas
+- nltk
+- flask
+- sqlalchemy
+- joblib
+
 
 ### Instructions on Running the App:
 1. Run the following commands in the project's root directory to set up your database and model.
@@ -48,9 +58,20 @@ The web app includes flask, html, css and javascript for the front end of the ap
     *  To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponseETL.db models/classifier.pkl`
 
-2. Run the following command in the app's directory to run your web app.
+2. Run the following commands in the app's directory to run your web app:
+
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+3. Go to **http://0.0.0.0:3001/** to view the app and enter messages for classification.
 
+### Displaying Outputs of the Classifier
 
+All relevant disaster categories are displayed in success blue colour while the irrelevant categories are displayed in dark gray color. The figures below are typical examples.
+
+![First image](images/output1.png)
+
+![Second image](images/output2.png)
+
+![Third image](images/output4.png)
+
+![Fourth image](images/output5.png)
